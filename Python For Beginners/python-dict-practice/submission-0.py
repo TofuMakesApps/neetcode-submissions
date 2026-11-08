@@ -1,0 +1,22 @@
+from typing import Dict # this adds type hinting for Dict
+
+def count_characters(word: str) -> Dict[str, int]:
+    # It should take a string word and return a dictionary with the count of each character in the word. The keys should be the characters and the values should be the count of each character.
+    new_dict = {}
+    new_list = []
+    for i in range(len(word)):
+        new_list.append(word[i])
+    for item in new_list:
+        if item not in new_dict:
+            new_dict[item] = 0
+        new_dict[item] += 1
+    return new_dict
+        
+    
+
+
+# don't modify below this line
+print(count_characters("hello"))
+print(count_characters("world"))
+print(count_characters("hello world"))
+print(count_characters("this is a longer sentence"))
